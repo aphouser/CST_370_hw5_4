@@ -1,5 +1,5 @@
 /*
- * HackerRank link:https://www.hackerrank.com/contests/cst370-su20-hw5/challenges/connect-components/submissions/code/1323829750
+ * HackerRank link:https://www.hackerrank.com/contests/cst370-su20-hw5/challenges/connect-components/submissions/code/1323830193
  * Title: hw5_4.java
  * Abstract: Reads in graph by user input.  Checks for connectivity and adds edges if they are needed to connect
  * Author: Adam Houser
@@ -15,7 +15,6 @@ public class hw5_4 {
 
         Scanner in = new Scanner(System.in);
 
-        ArrayList<Integer> vertices = new ArrayList<Integer>();
         ArrayList<Integer> notVisited = new ArrayList<Integer>();
         ArrayList<ArrayList<Integer>> list = new ArrayList<ArrayList<Integer>>();
         Queue<Integer> queue = new LinkedList<>();
@@ -58,7 +57,7 @@ public class hw5_4 {
                 }
 
                 // remove from list of notVisited
-                notVisited.remove(Integer.valueOf(list.get(temp).get(i)));
+                notVisited.remove(list.get(temp).get(i));
             }
         }
 
@@ -98,7 +97,7 @@ public class hw5_4 {
                         }
 
                         // remove from list of notVisited
-                        notVisited.remove(Integer.valueOf(list.get(temp).get(i)));
+                        notVisited.remove(list.get(temp).get(i));
                     }
                 }
             }
